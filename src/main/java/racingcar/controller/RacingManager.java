@@ -18,10 +18,16 @@ public class RacingManager {
 
     public void start() {
         List<String> carNameByInput = this.getCarNameByInput();
+        int trialCount = this.getTrialCount();
     }
 
     private List<String> getCarNameByInput() {
         outputView.carNameInputMessage();
         return inputView.readCarName();
+    }
+
+    private int getTrialCount() {
+        outputView.trialCountInputMessage();
+        return inputView.readTrialCount();
     }
 }

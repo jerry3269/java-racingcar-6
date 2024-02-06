@@ -24,4 +24,9 @@ public class InputView {
         inputViewValidator.check5Under(cars);
         inputViewValidator.checkNotDuplication(cars);
     }
+
+    public int readTrialCount() {
+        String stringTrialCount = Console.readLine();
+        return Integer.parseInt(stringTrialCount);
+    }
 }
