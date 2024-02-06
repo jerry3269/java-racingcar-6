@@ -21,7 +21,7 @@ public class InputView {
 
     private void validateCarNames(String[] cars) {
         inputViewValidator.checkNotBlank(cars);
-        inputViewValidator.check5Under(cars);
+        inputViewValidator.checkSizeLessThanFive(cars);
         inputViewValidator.checkNotDuplication(cars);
     }
 

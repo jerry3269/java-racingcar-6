@@ -5,7 +5,7 @@ import java.util.Arrays;
 import static racingcar.constant.ExceptionConstant.*;
 
 public class InputViewValidator {
-    public void check5Under(String[] cars) {
+    public void checkSizeLessThanFive(String[] cars) {
         for (String car : cars) {
             if(car.length() > 5) throw new IllegalArgumentException(FIVE_OVER_EXCEPTION.message());
         }
