@@ -27,6 +27,13 @@ public class InputView {
 
     public int readTrialCount() {
         String stringTrialCount = Console.readLine();
+        this.validateTrialCount(stringTrialCount);
         return Integer.parseInt(stringTrialCount);
+    }
+
+    private void validateTrialCount(String stringTrialCount) {
+        inputViewValidator.checkNumeric(stringTrialCount);
+        int trialCount = Integer.parseInt(stringTrialCount);
+        inputViewValidator.checkMoreThanOne(trialCount);
     }
 }

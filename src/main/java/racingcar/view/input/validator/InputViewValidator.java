@@ -24,4 +24,18 @@ public class InputViewValidator {
             throw new IllegalArgumentException(CAR_NAME_DUPLICATION_EXCEPTION.message());
         }
     }
+
+    public void checkNumeric(String stringTrialCount) {
+        try {
+            Integer.parseInt(stringTrialCount);
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException(NOT_NUMERIC_EXCEPTION.message());
+        }
+    }
+
+    public void checkMoreThanOne(int trialCount) {
+        if (trialCount < 1) {
+            throw new IllegalArgumentException(LESS_THEN_ONE_EXCEPTION.message());
+        }
+    }
 }
