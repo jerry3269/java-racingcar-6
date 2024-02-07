@@ -24,7 +24,7 @@ public class RacingManager {
     public void start() {
         List<String> carNameByInput = this.getCarNameByInput();
         int trialCount = this.getTrialCount();
-        this.printMoveResult();
+        this.printMoveResultMessage();
         this.moveCars(carNameByInput, trialCount);
     }
 
@@ -38,7 +38,7 @@ public class RacingManager {
         return inputView.readTrialCount();
     }
 
-    private void printMoveResult() {
+    private void printMoveResultMessage() {
         outputView.printNewLine();
         outputView.printMoveResultMessage();
     }
