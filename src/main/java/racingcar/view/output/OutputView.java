@@ -1,7 +1,8 @@
 package racingcar.view.output;
 
-import static racingcar.constant.MessageConstant.CAR_NAME_INPUT_MESSAGE;
-import static racingcar.constant.MessageConstant.TRIAL_COUNT_INPUT_MESSAGE;
+import racingcar.domain.Car;
+
+import static racingcar.constant.MessageConstant.*;
 
 public class OutputView {
     public void carNameInputMessage() {
@@ -10,5 +11,13 @@ public class OutputView {
 
     public void trialCountInputMessage() {
         System.out.println(TRIAL_COUNT_INPUT_MESSAGE.message());
+    }
+
+    public void printNewLine() {
+        System.out.println();
+    }
+
+    public void printMoveResultMessage() {
+        System.out.println(MOVE_RESULT_MESSAGE.message());
     }
 }
