@@ -25,7 +25,8 @@ public class RacingManager {
         List<String> carNameByInput = this.getCarNameByInput();
         int trialCount = this.getTrialCount();
         this.printMoveResultMessage();
-        this.moveCars(carNameByInput, trialCount);
+        List<Car> cars = this.moveCars(carNameByInput, trialCount);
+        this.printWinners(cars);
     }
 
     private List<String> getCarNameByInput() {
@@ -43,7 +44,7 @@ public class RacingManager {
         outputView.printMoveResultMessage();
     }
 
-    private void moveCars(List<String> carNameList, int trialCount) {
+    private List<Car> moveCars(List<String> carNameList, int trialCount) {
         List<Car> cars = carListService.toCarList(carNameList);
 
         for (int i = 0; i < trialCount; i++) {
@@ -51,5 +52,12 @@ public class RacingManager {
             outputView.moveResultMessage(cars);
             outputView.printNewLine();
         }
+        return cars;
+    }
+
+    private void printWinners(List<Car> cars) {
+        outputView.printWinnersMessage();
+        List<String> winners = carListService.getWinners(cars);
+        outputView.printWinners(winners);
     }
 }

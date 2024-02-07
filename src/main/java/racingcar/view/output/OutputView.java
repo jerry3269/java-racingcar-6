@@ -28,4 +28,12 @@ public class OutputView {
             System.out.println(car);
         }
     }
+
+    public void printWinnersMessage() {
+        System.out.print(WINNER_MESSAGE.message());
+    }
+
+    public void printWinners(List<String> winners) {
+        System.out.println(String.join(", ", winners));
+    }
 }

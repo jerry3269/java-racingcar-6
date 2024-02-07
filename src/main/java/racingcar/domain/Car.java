@@ -18,6 +18,14 @@ public class Car {
         if(randomNumber >= MIN_MOVE_NUMBER.value()) moveCount++;
     }
 
+    public int getMoveCount() {
+        return moveCount;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
