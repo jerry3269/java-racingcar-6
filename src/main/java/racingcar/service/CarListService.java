@@ -13,7 +13,7 @@ public class CarListService {
         this.randomNumberCreator = randomNumberCreator;
     }
 
-    public List<Car> toCarList(List<String> stringList) {
+    public static List<Car> toCarList(List<String> stringList) {
         return stringList.stream()
                 .map(Car::valueOf)
                 .collect(Collectors.toList());
@@ -25,7 +25,7 @@ public class CarListService {
         }
     }
 
-    public List<String> getWinners(List<Car> cars) {
+    public static List<String> getWinners(List<Car> cars) {
         Integer max = cars.stream()
                 .max(Comparator.comparing(Car::getMoveCount))
                 .map(Car::getMoveCount)
